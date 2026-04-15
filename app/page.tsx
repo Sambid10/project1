@@ -1,7 +1,7 @@
 import HeroPage from "@/components/HeroPage/HeroPage";
 export default function Home() {
   return (
-    <div className="font-family-secondary">
+    <div className="font-family-primary">
         <HeroPage/>
     </div>
   );

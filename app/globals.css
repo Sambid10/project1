@@ -3,15 +3,21 @@
 @theme {
   --font-family-primary: var(--font-grotesk);
   --font-family-secondary: var(--font-garamond);
-  --color-secondary: var(--secondary-text);
+  --color-background: var(--background);
+  --color-primary: var(--primary);
+  --color-secondary:var(--secondary);
+  --color-accent: var(--accent);
 }
+
 :root {
   --background: #1F1F1F;
-  --primary-text: #D1CFC0;
-  --secondary-text:#F76F53;
+  --primary: #D1CFC0; 
+  --secondary:#353535;   
+  --accent: #F76F53;     
 }
 
 body {
   background-color: var(--background);
-  color: var(--primary-text);
+  color: var(--primary);
+  font-family: var(--font-family-primary);
 }
