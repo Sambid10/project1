@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import { EB_Garamond, Geist, Geist_Mono, Space_Grotesk } from "next/font/google";
 import "./globals.css";
-import ContainerWrapper from "@/components/ContainerWrapper";
+import { QueryClientProvider } from "@tanstack/react-query";
+import { TanstackProvider } from "@/provider/query-provider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -13,16 +14,16 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-const garamond=EB_Garamond({
-  variable:"--font-garamond",
-  subsets:["latin"],
-  weight:["400","500","600","700","800"]
+const garamond = EB_Garamond({
+  variable: "--font-garamond",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700", "800"]
 })
 
-const grotesk=Space_Grotesk({
-  variable:"--font-grotesk",
-  subsets:["latin"],
-  weight:["400","500","600","700"]
+const grotesk = Space_Grotesk({
+  variable: "--font-grotesk",
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"]
 })
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -39,12 +40,14 @@ export default function RootLayout({
       lang="en"
       className={`${geistSans.variable} ${geistMono.variable} ${garamond.variable} ${grotesk.variable} h-full antialiased`}
     >
-      <body className="min-h-screen">
-        <ContainerWrapper>
+      <TanstackProvider>
+        <body className="min-h-screen">
           {children}
-        </ContainerWrapper>
 
-      </body>
+
+        </body>
+      </TanstackProvider>
+
     </html>
   );
 }

@@ -6,8 +6,8 @@ type ButtonProps = React.ComponentProps<"button"> & {
 }
 
 const variants = {
-  default: "bg-primary text-black hover:bg-primary/70",
-  secondary: "bg-secondary text-primary hover:bg-secondary/70 ",
+  default: "bg-primary text-black hover:bg-primary/90",
+  secondary: "bg-secondary text-primary hover:bg-secondary/90 ",
 }
 
 const sizes = {
@@ -26,7 +26,7 @@ function Button({
 }: ButtonProps) {
   return (
     <button
-      className={`inline-flex items-center justify-center gap-2 rounded-xl text-sm font-medium transition-all disabled:opacity-50 cursor-pointer ${variants[variant]} ${sizes[size]} ${className}`}
+      className={`inline-flex hover:scale-105 items-center justify-center gap-2 rounded-xl text-sm font-medium transition-all disabled:opacity-50 cursor-pointer ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     />
   )

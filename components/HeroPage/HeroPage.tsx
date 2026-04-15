@@ -38,7 +38,7 @@ const item1: Variants = {
   hidden: {
     opacity: 0,
     y: 10,
-    filter: "blur(3px)"
+    filter: "blur(5px)"
   },
   visible: {
     opacity: 1,
@@ -46,7 +46,7 @@ const item1: Variants = {
     filter: "blur(0px)",
     transition: {
       duration: 0.3,
-      ease: "easeIn"
+      ease: [0.64, 0, 0.78, 0]
     }
   }
 }
@@ -57,11 +57,11 @@ export default function HeroPage() {
       variants={container}
       initial="hidden"
       animate="visible"
-      className="min-h-screen pt-24 items-center justify-center flex flex-col gap-12"
+      className="min-h-screen pt-24 pb-28 items-center justify-center flex flex-col gap-12"
     >
 
       <div
-        className='font-family-secondary font-medium mt-8 text-[90px] flex flex-wrap text-center justify-center items-center gap-4 max-w-3xl mx-auto'
+        className='font-family-secondary font-medium mt-8 text-6xl md:text-[90px] flex flex-wrap text-center justify-center items-center gap-4 max-w-3xl mx-auto'
         style={{ lineHeight: "90%" }}
       >
         {["Welcome", "to", "weather,", "simplified."].map((word, i) => (
@@ -76,12 +76,12 @@ export default function HeroPage() {
       </div>
 
 
-      <div className='font-family-primary text-center text-[17px]'>
+      <div className='font-family-primary text-center text-sm md:text-[17px]'>
         {[
           "No ads. No tracking. No clutter",
           "Just the forecast — beautifully presented."
         ].map((line, i) => (
-          <motion.h1 key={i} variants={item}>
+          <motion.h1 className='' key={i} variants={item}>
             {line}
           </motion.h1>
         ))}
@@ -109,7 +109,7 @@ export default function HeroPage() {
           className='flex items-center gap-5'>
           {socialLinks.map((social, i) =>
             <Link className='hover:text-accent ease-in duration-100' href={social.href} key={i}>
-              <social.icon className='size-6' />
+              <social.icon className='size-5' />
             </Link>
           )}
         </motion.div>
