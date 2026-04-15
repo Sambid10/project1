@@ -4,7 +4,7 @@ export default function ContainerWrapper({children,className}:{
     className?:string
 }) {
   return (
-    <div className={twMerge("max-w-7xl mx-auto px-4 lg:px-2",className)}>
+    <div className={twMerge("max-w-7xl mx-auto px-4 lg:px-2 w-full relative",className)}>
         {children}
     </div>
   )

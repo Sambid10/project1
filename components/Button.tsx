@@ -2,12 +2,12 @@ import * as React from "react"
 
 type ButtonProps = React.ComponentProps<"button"> & {
   variant?: "default" | "secondary" 
-  size?: "default" | "sm" | "lg" | "xl"
+  size?: "default" | "sm" | "lg" | "xl" | "dxl"
 }
 
 const variants = {
-  default: "bg-primary text-black hover:bg-primary/90",
-  secondary: "bg-secondary text-primary ",
+  default: "bg-primary text-black hover:bg-primary/70",
+  secondary: "bg-secondary text-primary hover:bg-secondary/70 ",
 }
 
 const sizes = {
@@ -15,6 +15,7 @@ const sizes = {
   sm: "h-8 px-3 text-sm",
   lg: "h-10 px-6",
   xl:"h-14 px-6 text-[16px]",
+  dxl:"h-14.5 px-6 text-[17px]"
 }
 
 function Button({
