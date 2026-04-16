@@ -20,7 +20,7 @@ export default function HeroSection() {
     >
 
       <div
-        className='font-family-secondary font-medium mt-8 text-6xl md:text-[90px] flex flex-wrap text-center justify-center items-center gap-4 max-w-3xl mx-auto'
+        className='font-family-secondary font-medium mt-8  text-6xl md:text-[90px] flex flex-wrap text-center justify-center items-center gap-4 max-w-3xl mx-auto'
         style={{ lineHeight: "90%" }}
       >
         {["Welcome", "to", "weather,", "simplified."].map((word, i) => (
