@@ -14,7 +14,7 @@ export default function DropDown() {
     useOutsideClick({ ref: ref, handler: handleClick ,btnref:btnref})
 
     return (
-        <div className='md:relative hidden'>
+        <div className='md:relative hidden md:block'>
             <button
                 ref={btnref}
                 onClick={handleClick}

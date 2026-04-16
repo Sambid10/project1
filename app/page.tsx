@@ -1,15 +1,17 @@
 import Header from "@/components/Header/Header";
-import HeroPage from "@/components/HeroPage/HeroPage";
+import HeroSection from "@/components/HeroSection/HeroSection";
 import Footer from "@/components/Footer/Footer";
 import ContainerWrapper from "@/components/ContainerWrapper";
+import SponserSection from "@/components/SponserSection/SponserSection";
 export default function Home() {
   return (
     <div className="font-family-primary">
-            <ContainerWrapper>
-        <Header/>
-        <HeroPage/>
-            </ContainerWrapper>
-        <Footer/>
+      <ContainerWrapper>
+        <Header />
+        <HeroSection />
+        <SponserSection/>
+      </ContainerWrapper>
+      <Footer />
     </div>
   );
 }

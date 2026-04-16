@@ -3,55 +3,14 @@
 import { Button } from '../Button'
 import { BiChevronRight } from 'react-icons/bi'
 import { HiHeart } from 'react-icons/hi2'
-import { motion, Variants } from 'framer-motion'
+import { motion } from 'framer-motion'
 import { socialLinks } from '@/constants/SocialLinks'
 import Link from 'next/link'
 import Image from 'next/image'
+import { container, anim1, anim2 } from '@/constants/anim'
 
-const container = {
-  hidden: {},
-  visible: {
-    transition: {
-      staggerChildren: 0.2,
-      delayChildren: 0.2
-    }
-  }
-}
 
-const item: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 5,
-    filter: "blur(3px)"
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: {
-      duration: 0.2,
-      ease: "easeIn"
-    }
-  }
-}
-const item1: Variants = {
-  hidden: {
-    opacity: 0,
-    y: 10,
-    filter: "blur(5px)"
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    filter: "blur(0px)",
-    transition: {
-      duration: 0.3,
-      ease: [0.64, 0, 0.78, 0]
-    }
-  }
-}
-
-export default function HeroPage() {
+export default function HeroSection() {
   return (
     <motion.div
       variants={container}
@@ -67,7 +26,7 @@ export default function HeroPage() {
         {["Welcome", "to", "weather,", "simplified."].map((word, i) => (
           <motion.h1
             key={i}
-            variants={item}
+            variants={anim1}
             className={word === "weather," ? "text-accent italic" : ""}
           >
             {word}
@@ -81,20 +40,22 @@ export default function HeroPage() {
           "No ads. No tracking. No clutter",
           "Just the forecast — beautifully presented."
         ].map((line, i) => (
-          <motion.h1 className='' key={i} variants={item}>
+          <motion.h1 className='' key={i} variants={anim1}>
             {line}
           </motion.h1>
         ))}
       </div>
       <div className='flex gap-4 items-center '>
-        <motion.div variants={item}>
-          <Button size='xl'>
-            <h1>Now Available</h1>
-            <BiChevronRight className='size-5' />
-          </Button>
+        <motion.div variants={anim1}>
+          <Link href={"/weather"}>
+            <Button size='xl'>
+              <h1>Now Available</h1>
+              <BiChevronRight className='size-5' />
+            </Button></Link>
+
         </motion.div>
         <motion.div
-          variants={item}
+          variants={anim1}
         >
 
           <Button variant='secondary' size='xl'>
@@ -105,7 +66,7 @@ export default function HeroPage() {
       </div>
       <div className='-mt-5'>
         <motion.div
-          variants={item}
+          variants={anim1}
           className='flex items-center gap-5'>
           {socialLinks.map((social, i) =>
             <Link className='hover:text-accent ease-in duration-100' href={social.href} key={i}>
@@ -115,14 +76,14 @@ export default function HeroPage() {
         </motion.div>
       </div>
 
-      <motion.div 
-      variants={item1}
-      className="relative w-full h-120">
+      <motion.div
+        variants={anim2}
+        className="relative w-full h-120">
         <Image
           src="/rain1.gif"
           alt="rain"
           fill
-
+          loading='eager'
           unoptimized
           className="object-cover brightness-70 rounded-xl border-b-4 border-[0.5px] border-gray-500 border-b-primary"
         />

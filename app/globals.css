@@ -21,3 +21,6 @@ body {
   color: var(--primary);
   font-family: var(--font-family-primary);
 }
+input:focus {
+  outline: none !important;
+}

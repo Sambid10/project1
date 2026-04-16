@@ -17,11 +17,12 @@ export default function Footer() {
                         <p>features. We care about your experience, not your data.</p>
                     </div>
                 </div>
+                <Link href={"/weather"}>
+                    <Button size='dxl' variant='secondary' className='w-fit md:w-[20%] lg:w-[15%]'>
+                        <h1>Get Started</h1>
+                        <BiChevronRight />
+                    </Button></Link>
 
-                <Button size='dxl' variant='secondary' className='w-fit md:w-[20%] lg:w-[15%]'>
-                    <h1>Get Started</h1>
-                    <BiChevronRight />
-                </Button>
 
                 <div className='flex flex-wrap gap-8 md:gap-24 lg:gap-40 w-full'>
                     <div className='flex flex-col gap-3'>
