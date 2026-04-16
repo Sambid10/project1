@@ -20,7 +20,7 @@ export default function WeatherSection() {
     })
 
     return (
-        <div className="w-[60%] flex -mt-12 flex-col items-center gap-8">
+        <div className="w-full md:w-[90%] lg:w-[60%]  flex -mt-12 flex-col items-center gap-8">
 
             <div className='relative w-full h-14'>
                 <input

@@ -34,7 +34,7 @@ export default function WeatherCard({ data }: Props) {
 
   return (
     <div className='bg-secondary flex flex-col min-h-100 rounded-xl border border-primary w-full'>
-      <div className='py-4 px-8 border-b border-primary flex items-center justify-between h-full'>
+      <div className='py-4 px-4 md:px-8 border-b border-primary flex items-center justify-between h-full'>
         <h1 className='uppercase tracking-tight text-sm'>
           Current Weather
         </h1>
@@ -43,7 +43,7 @@ export default function WeatherCard({ data }: Props) {
         </h1>
       </div>
 
-      <div className='flex items-center justify-between p-8  flex-1'>
+      <div className='flex flex-col gap-8 md:gap-0 md:flex-row items-center justify-between py-8 px-4 md:px-8  flex-1'>
         <div className='flex flex-col gap-4'>
           <div className='flex gap-4 items-center'>
             <Image

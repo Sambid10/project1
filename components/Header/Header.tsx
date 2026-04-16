@@ -17,13 +17,13 @@ export default function Header() {
 
       <DropDown />
       {pathname === "/weather" ? <Link href={"/"}>
-        <Button className='w-50' size='xl'>
+        <Button className='w-40 md:w-50 ' size='xl'>
           <h1>Go Back</h1>
           <BiChevronLeft className='size-5' />
         </Button>
       </Link> :
         <Link href={"/weather"}>
-          <Button className='w-50' size='xl'>
+          <Button className='w-40 md:w-50 ' size='xl'>
             <h1>Get Started</h1>
             <BiChevronRight className='size-5' />
           </Button>
