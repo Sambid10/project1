@@ -67,10 +67,10 @@ Some of the main challenges faced during development were:
 ## Screenshots
 
 ### Home Page
-![Home Page](/1.png)
-![Home Page](/2.png)
-![Home Page](/3.png)
+![Home Page](1.png)
+![Home Page](2.png)
+![Home Page](3.png)
 
 ### Weather Page
-![Weather Page](/4.png)
-![Weather Page](/5.png)
+![Weather Page](4.png)
+![Weather Page](5.png)
