@@ -30,7 +30,7 @@ export default function WeatherSection() {
                         }
                     }}
                     onChange={(e) => setCity(e.currentTarget.value)}
-                    placeholder='Enter location'
+                    placeholder='Enter your city...'
                     className='w-full bg-primary rounded-xl text-black h-full px-8 border-3 border-gray-600 focus:border-blue-500'
                 />
 
