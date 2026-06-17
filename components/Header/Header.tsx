@@ -4,6 +4,7 @@ import { BiChevronLeft, BiChevronRight } from 'react-icons/bi'
 import DropDown from './DropDown'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
+import { BsDownload } from 'react-icons/bs'
 export default function Header() {
   const pathname = usePathname()
   return (
@@ -12,24 +13,14 @@ export default function Header() {
       <Link
         href={"/"}
       >
-        <h1 className='font-family-secondary text-3xl tracking-wide italic text-accent font-medium'>Lumen</h1>
+        <h1 className='font-family-secondary text-2xl md:text-3xl tracking-wide italic text-accent font-medium'>SMS Sender</h1>
       </Link>
-
-      <DropDown />
-      {pathname === "/weather" ? <Link href={"/"}>
-        <Button className='w-40 md:w-50 ' size='xl'>
-          <h1>Go Back</h1>
-          <BiChevronLeft className='size-5' />
+      <Link  href="/app-release.apk" download="SMSender.apk">
+           <Button className='w-40 md:w-50 ' size='xl'>
+          <h1>Download Apk</h1>
+          <BsDownload className='size-4' />
         </Button>
-      </Link> :
-        <Link href={"/weather"}>
-          <Button className='w-40 md:w-50 ' size='xl'>
-            <h1>Get Started</h1>
-            <BiChevronRight className='size-5' />
-          </Button>
-        </Link>
-      }
-
+      </Link>
 
     </header>
   )

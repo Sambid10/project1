@@ -10,10 +10,10 @@
 }
 
 :root {
-  --background: #1F1F1F;
-  --primary: #D1CFC0; 
-  --secondary:#353535;   
-  --accent: #F76F53;     
+--background: #1B1C22;
+--primary: #DADCE5;
+--secondary: #2B2D36;
+--accent: #4A5FD1;    
 }
 
 body {

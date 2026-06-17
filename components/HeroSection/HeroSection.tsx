@@ -1,7 +1,7 @@
 "use client"
 
 import { Button } from '../Button'
-import { BiChevronRight } from 'react-icons/bi'
+import { BiChevronRight, BiDownArrow, BiDownload } from 'react-icons/bi'
 import { HiHeart } from 'react-icons/hi2'
 import { motion } from 'framer-motion'
 import { socialLinks } from '@/constants/SocialLinks'
@@ -23,11 +23,11 @@ export default function HeroSection() {
         className='font-family-secondary font-medium mt-8  text-6xl md:text-[90px] flex flex-wrap text-center justify-center items-center gap-4 max-w-3xl mx-auto'
         style={{ lineHeight: "90%" }}
       >
-        {["Welcome", "to", "weather,", "simplified."].map((word, i) => (
+        {["Welcome", "to", "SMS,", "simplified."].map((word, i) => (
           <motion.h1
             key={i}
             variants={anim1}
-            className={word === "weather," ? "text-accent italic" : ""}
+            className={word === "SMS," ? "text-accent italic" : ""}
           >
             {word}
           </motion.h1>
@@ -38,7 +38,7 @@ export default function HeroSection() {
       <div className='font-family-primary text-center text-sm md:text-[17px]'>
         {[
           "No ads. No tracking. No clutter",
-          "Just the forecast — beautifully presented."
+          "Send sms directly easily to your liking."
         ].map((line, i) => (
           <motion.h1 className='' key={i} variants={anim1}>
             {line}
@@ -47,10 +47,10 @@ export default function HeroSection() {
       </div>
       <div className='flex gap-4 items-center '>
         <motion.div variants={anim1}>
-          <Link href={"/weather"}>
+          <Link  href="/app-release.apk" download="SMSender.apk">
             <Button size='xl'>
               <h1>Now Available</h1>
-              <BiChevronRight className='size-5' />
+              <BiDownload className='size-5' />
             </Button></Link>
 
         </motion.div>
@@ -79,13 +79,12 @@ export default function HeroSection() {
       <motion.div
         variants={anim2}
         className="relative w-full h-120">
-        <Image
-          src="/rain1.gif"
-          alt="rain"
-          fill
-          loading='eager'
-          unoptimized
-          className="object-cover brightness-70 rounded-xl border-b-4 border-[0.5px] border-gray-500 border-b-primary"
+        <video
+          src="/a.mp4"
+
+          autoPlay
+          loop
+          className="object-cover h-full w-full brightness-70 rounded-xl border-b-4 border-[0.5px] border-gray-500 border-b-primary"
         />
       </motion.div>
     </motion.div>

@@ -1,6 +1,5 @@
 import Header from "@/components/Header/Header";
 import HeroSection from "@/components/HeroSection/HeroSection";
-import Footer from "@/components/Footer/Footer";
 import ContainerWrapper from "@/components/ContainerWrapper";
 import SponserSection from "@/components/SponserSection/SponserSection";
 export default function Home() {
@@ -9,9 +8,9 @@ export default function Home() {
       <ContainerWrapper>
         <Header />
         <HeroSection />
-        <SponserSection/>
+        {/* <SponserSection/> */}
       </ContainerWrapper>
-      <Footer />
+      {/* <Footer /> */}
     </div>
   );
 }

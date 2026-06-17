@@ -14,7 +14,7 @@ const sizes = {
   default: "h-9 px-4 py-2",
   sm: "h-8 px-3 text-sm",
   lg: "h-10 px-6",
-  xl:"h-14 px-6 text-[16px]",
+  xl:"h-10 md:h-14 px-6 text-[12px] md:text-[16px]",
   dxl:"h-14.5 px-6 text-[17px]"
 }
 
